@@ -5,13 +5,11 @@ function StudentManager() {
     const [students, setStudents] = useState([])
     const [newStudent, setNewStudent] = useState({ id: '', name: '', course: '' })
 
-    // Handle input changes and update newStudent object
     const handleChange = (e) => {
         const { name, value } = e.target
         setNewStudent((prev) => ({ ...prev, [name]: value }))
     }
 
-    // Add newStudent to the students array, then clear the input fields
     const handleAdd = () => {
         if (!newStudent.id || !newStudent.name || !newStudent.course) {
             alert('Please fill in all fields before adding a student.')
@@ -28,14 +26,12 @@ function StudentManager() {
         setNewStudent({ id: '', name: '', course: '' })
     }
 
-    // Remove a student by id
     const handleDelete = (id) => {
         setStudents((prev) => prev.filter((s) => String(s.id) !== String(id)))
     }
 
     return (
         <div className="sm-container">
-            {/* Header */}
             <header className="sm-header">
                 <div className="sm-header-icon">🎓</div>
                 <div>
@@ -44,7 +40,6 @@ function StudentManager() {
                 </div>
             </header>
 
-            {/* Add Student Form */}
             <section className="sm-form-section">
                 <h2 className="sm-section-title">Add New Student</h2>
                 <div className="sm-form">
@@ -87,7 +82,6 @@ function StudentManager() {
                 </div>
             </section>
 
-            {/* Student List */}
             <section className="sm-list-section">
                 <h2 className="sm-section-title">
                     Student List
