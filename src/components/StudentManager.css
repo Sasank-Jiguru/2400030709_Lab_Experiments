@@ -1,0 +1,327 @@
+/* =============================================
+   StudentManager.css – Modern vibrant UI
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdf4 100%);
+  min-height: 100vh;
+}
+
+.sm-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---- Header ---- */
+.sm-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  padding: 32px 36px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.sm-header::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.sm-header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: 80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.sm-header-icon {
+  font-size: 3.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+  position: relative;
+  z-index: 1;
+}
+
+.sm-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.sm-subtitle {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Section wrapper ---- */
+.sm-form-section,
+.sm-list-section {
+  background: #ffffff;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 18px;
+  padding: 30px 30px 34px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.08);
+}
+
+.sm-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sm-badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+
+/* ---- Form ---- */
+.sm-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.sm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sm-field label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.sm-field input {
+  padding: 11px 15px;
+  border: 2px solid #e0e7ff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #1e1b4b;
+  background: #f8f7ff;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  outline: none;
+}
+
+.sm-field input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+  background: #fff;
+}
+
+.sm-field input::placeholder {
+  color: #c4b5fd;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  align-self: flex-end;
+}
+
+.btn-add:hover {
+  opacity: 0.92;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 2px solid #fecdd3;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  border-radius: 8px;
+}
+
+.btn-delete:hover {
+  background: #e11d48;
+  color: #fff;
+  border-color: #e11d48;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ---- Table ---- */
+.sm-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e0e7ff;
+}
+
+.sm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sm-table thead {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.sm-table thead th {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 20px;
+  text-align: left;
+}
+
+.sm-table tbody tr {
+  border-bottom: 1px solid #f0f0ff;
+  transition: background 0.15s;
+}
+
+.sm-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.sm-table tbody tr:hover {
+  background: #faf9ff;
+}
+
+.sm-table td {
+  padding: 14px 20px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.sm-serial {
+  color: #a5b4fc !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.sm-id {
+  font-weight: 700;
+  color: #6366f1 !important;
+  font-size: 0.9rem;
+}
+
+.sm-name {
+  font-weight: 600;
+  color: #1e1b4b !important;
+}
+
+.sm-course-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  color: #7c3aed;
+  padding: 4px 13px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid #c4b5fd;
+}
+
+/* ---- Empty state ---- */
+.sm-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px;
+  gap: 14px;
+}
+
+.sm-empty-icon {
+  font-size: 3.5rem;
+  filter: grayscale(0.3);
+}
+
+.sm-empty p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .sm-form {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 24px;
+  }
+
+  .sm-title {
+    font-size: 1.6rem;
+  }
+}
